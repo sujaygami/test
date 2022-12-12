@@ -1,0 +1,9 @@
+{
+  "courseId" : "course1",
+  "userId" : "user1",
+  "assessmentId" : "asmt1",
+  "dtSubmitted" : "2022-07-13T23:30:52.123Z",
+  "score": {
+    "pointsEarned" : 99
+  }
+}

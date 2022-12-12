@@ -1,0 +1,17 @@
+{
+  "id" : "course1",
+  "roster" : [
+    {
+      "id" : "user1",
+      "type" : "student"
+    },
+    {
+      "id" : "user2",
+      "type" : "student"
+    },
+    {
+      "id" : "user3",
+      "type" : "instructor"
+    }
+  ]
+}

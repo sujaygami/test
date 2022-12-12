@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "a0b0fe9c-04b8-4883-bd7f-171ee103e24a",
+		"name": "gb-coding-exercise-postman-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Submit Assessment",
+			"item": [
+				{
+					"name": "Success - 200",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"courseId\" : \"course-002\",\n  \"userId\" : \"user-003\",\n  \"assessmentId\" : \"asmt4\",\n  \"dtSubmitted\" : \"2022-07-13T23:30:52.123Z\",\n  \"score\": {\n    \"pointsEarned\" : 25\n  }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/submission/submitAssessment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submission",
+								"submitAssessment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gradebook",
+			"item": [
+				{
+					"name": "/getAllStudentAssessmentGrades - Success",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/gradebook/:gbUserId/getAllStudentAssessmentGrades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gradebook",
+								":gbUserId",
+								"getAllStudentAssessmentGrades"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "gbUserId",
+									"value": "user-003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/getOverallStudentGrade - Success",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/gradebook/:gbUserId/getOverallStudentGrade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gradebook",
+								":gbUserId",
+								"getOverallStudentGrade"
+							],
+							"variable": [
+								{
+									"key": "gbUserId",
+									"value": "user-003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/getOverallStudentGrade - Success",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/gradebook/:courseId/getOverallCourseGrade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"gradebook",
+								":courseId",
+								"getOverallCourseGrade"
+							],
+							"variable": [
+								{
+									"key": "courseId",
+									"value": "course-002"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+  "id" : "course1",
+  "assignments" : [
+    {
+      "id" : "a1",
+      "assessments" : [
+        {
+          "id" : "asmt1",
+          "type" : "homework",
+          "pointsPossible" : 100
+        }
+      ]
+    }
+  ]
+}
